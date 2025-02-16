@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Users</title>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <div class="djangotwo">
+    {% if User %}
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+      </thead>
+
+      {% for users in User %}
+      <tr>
+        <td>{{ users.first_name }} {{ users.last_name }}</td>
+        <td>{{ users.email }}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+    {% else %}
+      <p>Error attemp to accses data</p>
+    {% endif %}
+  </div>
+</body>
+</html>

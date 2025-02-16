@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  font-family: monospace;
+}
+
+.djangotwo {
+  padding-left: 100px;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: monospace;
+}
